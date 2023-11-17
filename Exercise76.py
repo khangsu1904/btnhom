@@ -5,7 +5,7 @@ if n<2:
 else:
     while factor<=n:
         if n%factor==0:
-            print('{}'.format(factor))
+            print(factor)
             n/=factor
         else:
             factor=factor+1
