@@ -1,9 +1,12 @@
-import string
-def is_palondrome(s):
-    s=''.join(char.lower() for char in s if char.isalnum())
-    return s == s[::-1]
-phrase = input('Enter a phrase: ')
-if is_palondrome(phrase):
-    print(f'{phrase} is a palindrome!')
+user_input = input("Enter a string: ")
+cleaned_input = ''.join(char.lower() for char in user_input if char.isalnum())
+is_palindrome = True
+length = len(cleaned_input)
+for i in range(length // 2):
+    if cleaned_input[i] != cleaned_input[length - i - 1]:
+        is_palindrome = False
+        break
+if is_palindrome:
+    print(f"The string '{user_input}' is a palindrome, ignoring spaces, punctuation, and case!")
 else:
-    print(f'{phrase} is not a palindrome.')
+    print(f"The string '{user_input}' is not a palindrome, ignoring spaces, punctuation, and case.")
