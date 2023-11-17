@@ -1,7 +1,6 @@
 import random
 
 updates=0
-
 num=100
 max=random.randrange(1,num+1)
 print(max)
